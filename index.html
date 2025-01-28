@@ -1,173 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E Commerce</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="banner">
-        <p class="banner__text">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-          <a href="#" class="banner__link">ShopNow</a>
-        </p>
-        <div class="language__selector">
-          <select name="language" id="language-select">
-            <option value="english">English</option>
-            <option value="russian">Russian</option>
-          </select>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="banner">
+      <p class="banner__text">
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        <a href="#" class="banner__link">ShopNow</a>
+      </p>
+      <div class="language__selector">
+        <select name="language" id="language-select">
+          <option value="english">English</option>
+          <option value="russian">Russian</option>
+        </select>
+      </div>
+    </div>
+    <nav class="container navbar">
+      <div class="logo">
+        <p class="logo__text">Exclusive</p>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a class="menu_a" href="#">Home</a></li>
+        </ul>
+        <ul>
+          <li><a class="menu_a" href="#">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a class="menu_a" href="#">About</a></li>
+        </ul>
+        <ul>
+          <li><a class="menu_a" href="#">Sign up</a></li>
+        </ul>
+      </div>
+
+      <div class="search">
+        <input class="search_input" type="text" placeholder="What are you looking for?" />
+        <div class="card_icon">
+          <img src="./assets/svg/Wishlist.svg" alt="" />
+          <img src="./assets/svg/Cart1.svg" alt="" />
+          <img src="./assets/svg/Profile.svg" alt="" />
         </div>
       </div>
-      <nav class="container navbar">
-        <div class="logo">
-          <p class="logo__text">Exclusive</p>
+    </nav>
+    <div class="border"></div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="#">Woman’s Fashion</a>
+            <img src="./assets/svg/right-arrow.svg" alt="" />
+          </li>
+          <li>
+            <a href="#">Men’s Fashion</a>
+            <img src="./assets/svg/right-arrow.svg" alt="" />
+          </li>
+          <li>
+            <a href="Electronics">Electronics</a>
+          </li>
+          <li>
+            <a href="Electronics">Home & Lifestyle</a>
+          </li>
+          <li>
+            <a href="Electronics">Medicine</a>
+          </li>
+          <li>
+            <a href="Electronics">Sports & Outdoor</a>
+          </li>
+          <li>
+            <a href="Electronics">Baby’s & Toys</a>
+          </li>
+          <li>
+            <a href="Electronics">Groceries & Pets</a>
+          </li>
+          <li>
+            <a href="Electronics">Health & Beauty</a>
+          </li>
+        </ul>
+      </div>
+      <div class="border-hero"></div>
+      <div class="hero-slider">
+        <div class="apple-logo">
+          <img src="./assets/imgs/apple-icon.png" alt="" />
+          <p>iPhone 14 Series</p>
         </div>
-        <div class="menu">
-          <ul>
-            <li><a class="menu_a" href="#">Home</a></li>
-          </ul>
-          <ul>
-            <li><a class="menu_a" href="#">Contact</a></li>
-          </ul>
-          <ul>
-            <li><a class="menu_a" href="#">About</a></li>
-          </ul>
-          <ul>
-            <li><a class="menu_a" href="#">Sign up</a></li>
-          </ul>
+        <h2>Up to 10% <br />off Voucher</h2>
+        <div class="slide-button">
+          <p>Shop Now</p>
+          <img src="./assets/svg/hero-right.svg" alt="" />
         </div>
-
-        <div class="search">
-          <input
-            class="search_input"
-            type="text"
-            placeholder="What are you looking for?"
-          />
-          <div class="card_icon">
-            <img src="./assets/svg/Wishlist.svg" alt="" />
-            <img src="./assets/svg/Cart1.svg" alt="" />
-            <img src="./assets/svg/Profile.svg" alt="" />
+        <div class="slider">
+          <img src="./assets/svg/slider.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="sales container">
+      <div class="sales_top">
+        <div class="today-rectangle"></div>
+        <p>Today’s</p>
+      </div>
+      <div class="section_flash">
+        <div class="section_title">
+          <h1>Flash Sales</h1>
+        </div>
+        <div class="sales_timer">
+          <div class="sales-item">
+            <p>Days</p>
+            <h3>03</h3>
+          </div>
+          <div class="timer-icon">
+            <img src="./assets/svg/Semiclone.svg" alt="" />
+          </div>
+          <div class="sales-item">
+            <p>Hours</p>
+            <h3>23</h3>
+          </div>
+          <div class="timer-icon">
+            <img src="./assets/svg/Semiclone.svg" alt="" />
+          </div>
+          <div class="sales-item">
+            <p>Minutes</p>
+            <h3>19</h3>
+          </div>
+          <div class="timer-icon">
+            <img src="./assets/svg/Semiclone.svg" alt="" />
+          </div>
+          <div class="sales-item">
+            <p>Seconds</p>
+            <h3>56</h3>
           </div>
         </div>
-      </nav>
-      <div class="border"></div>
-    </header>
-    <main class="container">
-      <section class="hero">
-        <div class="sidebar">
-          <ul>
-            <li>
-              <a href="#">Woman’s Fashion</a>
-              <img src="./assets/svg/right-arrow.svg" alt="" />
-            </li>
-            <li>
-              <a href="#">Men’s Fashion</a>
-              <img src="./assets/svg/right-arrow.svg" alt="" />
-            </li>
-            <li>
-              <a href="Electronics">Electronics</a>
-            </li>
-            <li>
-              <a href="Electronics">Home & Lifestyle</a>
-            </li>
-            <li>
-              <a href="Electronics">Medicine</a>
-            </li>
-            <li>
-              <a href="Electronics">Sports & Outdoor</a>
-            </li>
-            <li>
-              <a href="Electronics">Baby’s & Toys</a>
-            </li>
-            <li>
-              <a href="Electronics">Groceries & Pets</a>
-            </li>
-            <li>
-              <a href="Electronics">Health & Beauty</a>
-            </li>
-          </ul>
-        </div>
-        <div class="border-hero"></div>
-        <div class="hero-slider">
-          <div class="apple-logo">
-            <img src="./assets/imgs/apple-icon.png" alt="" />
-            <p>iPhone 14 Series</p>
+        <div class="navigation_buttons">
+          <div class="prev__btn">
+            <img src="./assets/svg/prev.svg" alt="prev_icon" />
           </div>
-          <h2>Up to 10% <br />off Voucher</h2>
-          <div class="slide-button">
-            <p>Shop Now</p>
-            <img src="./assets/svg/hero-right.svg" alt="" />
-          </div>
-          <div class="slider">
-            <img src="./assets/svg/slider.svg" alt="" />
+          <div class="next__btn">
+            <img src="./assets/svg/next.svg" alt="next_icon" />
           </div>
         </div>
-      </section>
-      <section class="sales container">
-        <div class="sales_top">
-          <div class="today-rectangle"></div>
-          <p>Today’s</p>
+      </div>
+    </section>
+    <section class="container border-bottom">
+      <div class="products">
+        <div class="product__item">
+          <div class="product__image">
+            <img src="./assets/imgs/gamepad.png" alt="" />
+            <div class="product__discount">-40%</div>
+            <div class="wishlist__btn">
+              <img src="./assets/svg/Heart.svg" alt="" />
+              <img src="./assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">HAVIT HV-G92 Gamepad</h4>
+            <div class="product__price">
+              <p class="current__price">$120</p>
+              <del class="original__price">$160</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <p class="count__text">(88)</p>
+            </div>
+          </div>
         </div>
-        <div class="section_flash">
-          <div class="section_title">
-            <h1>Flash Sales</h1>
+        <div class="product__item">
+          <div class="product__image">
+            <img src="./assets/imgs/keyboard.png" alt="" />
+            <div class="product__discount">-35%</div>
+            <div class="wishlist__btn">
+              <img src="./assets/svg/Heart.svg" alt="" />
+              <img src="./assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
           </div>
-          <div class="sales_timer">
-            <div class="sales-item">
-              <p>Days</p>
-              <h3>03</h3>
+          <div class="product__description">
+            <h4 class="product__name">AK-900 Wired Keyboard</h4>
+            <div class="product__price">
+              <p class="current__price">$960</p>
+              <del class="original__price">$1160</del>
             </div>
-            <div class="timer-icon">
-              <img src="./assets/svg/Semiclone.svg" alt="" />
-            </div>
-            <div class="sales-item">
-              <p>Hours</p>
-              <h3>23</h3>
-            </div>
-            <div class="timer-icon">
-              <img src="./assets/svg/Semiclone.svg" alt="" />
-            </div>
-            <div class="sales-item">
-              <p>Minutes</p>
-              <h3>19</h3>
-            </div>
-            <div class="timer-icon">
-              <img src="./assets/svg/Semiclone.svg" alt="" />
-            </div>
-            <div class="sales-item">
-              <p>Seconds</p>
-              <h3>56</h3>
+            <div class="product__rating">
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/nonestar.svg" alt="" /></span>
+              <p class="count__text">(75)</p>
             </div>
           </div>
-          <div class="navigation_buttons">
+        </div>
+        <div class="product__item">
+          <div class="product__image">
+            <img src="./assets/imgs/monitor.png" alt="" />
+            <div class="product__discount">-30%</div>
+            <div class="wishlist__btn">
+              <img src="./assets/svg/Heart.svg" alt="" />
+              <img src="./assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">IPS LCD Gaming Monitor</h4>
+            <div class="product__price">
+              <p class="current__price">$370</p>
+              <del class="original__price">$400</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <p class="count__text">(99)</p>
+            </div>
+          </div>
+        </div>
+        <div class="product__item">
+          <div class="product__image">
+            <img src="./assets/imgs/chair.png" alt="" />
+            <div class="product__discount">-25%</div>
+            <div class="wishlist__btn">
+              <img src="./assets/svg/Heart.svg" alt="" />
+              <img src="./assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">S-Series Comfort Chair</h4>
+            <div class="product__price">
+              <p class="current__price">$375</p>
+              <del class="original__price">$400</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star.svg" alt="" /></span>
+              <span><img src="./assets/svg/star-half-filled.svg" alt="" /></span>
+              <p class="count__text">(99)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products__button">
+        <button class="products-btn">View All Products</button>
+      </div>
+    </section>
+    <section class="categories container border-bottom">
+      <div class="category__top">
+        <div class="category__text">
+          <div class="category__badge"></div>
+          <p>Categories</p>
+        </div>
+        <div class="category__title">
+          <p>Browse By Category</p>
+          <div class="navigation__buttons">
             <div class="prev__btn">
-              <img src="./assets/svg/prev.svg" alt="prev_icon" />
+              <img src="./assets/svg/prev.svg" alt="">
             </div>
             <div class="next__btn">
-              <img src="./assets/svg/next.svg" alt="next_icon" />
+              <img src="./assets/svg/next.svg" alt="">
             </div>
           </div>
         </div>
-      </section>
-      <section class="container">
-        <div class="products">
-          <div class="product__item">
-            <div class="product__image">
-              <img src="./assets/imgs/gamepad.png" alt="" />
-              <div class="product__discount">-40%</div>
-              <div class="wishlist__btn">
-                <img src="./assets/svg/Heart.svg" alt="" />
-                <img src="./assets/svg/Eye.svg" alt="" />
-              </div>
-              <button class="add-to-card">Add To Card</button>
+      </div>
+      <div class="category__cards">
+        <div class="category__item">
+          <img class="category__icon" src="./assets/svg/Category-CellPhone.svg" alt="">
+          <p>Phones</p>
+        </div>
+        <div class="category__item">
+          <img class="category__icon" src="./assets/svg/Category-Computer.svg" alt="">
+          <p>Computers</p>
+        </div>
+        <div class="category__item">
+          <img class="category__icon" src="./assets/svg/Category-SmartWatch.svg" alt="">
+          <p>SmartWatch</p>
+        </div>
+        <div class="category__item">
+          <img class="category__icon" src="./assets/svg/Category-Camera.svg" alt="">
+          <p>Camera</p>
+        </div>
+        <div class="category__item">
+          <img class="category__icon" src="./assets/svg/Category-Headphone.svg" alt="">
+          <p>HeadPhones</p>
+        </div>
+        <div class="category__item">
+          <img class="category__icon" src="./assets/svg/Category-Gamepad.svg" alt="">
+          <p>Gaming</p>
+        </div>
+      </div>
+    </section>
+    <section class="container ">
+      <div class="best">
+        <div class="best__top">
+          <div class="best__month">
+            <div class="best__badge"></div>
+            <p>This Month</p>
+          </div>
+          <div class="best__title">
+            <h3>Best Selling Products</h3>
+            <button class="best__btn">View All</button>
+          </div>
+        </div>
+        <div class="cards__container">
+          <div class="card__item">
+            <div class="card__image">
+              <img class="best__wishlist" src="./assets/svg/Heart.svg" alt="">
+              <img class="best__view" src="./assets/svg/Eye.svg" alt="">
             </div>
-            <div class="product__description">
-              <h4 class="product__name">HAVIT HV-G92 Gamepad</h4>
+            <div class="card__description">
+              <h4 class="product__name">The north coat</h4>
               <div class="product__price">
-                <p class="current__price">$120</p>
-                <del class="original__price">$160</del>
+                <p class="current__price">$260</p>
+                <del class="original__price">$360</del>
               </div>
               <div class="product__rating">
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
@@ -175,22 +335,17 @@
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <p class="count__text">(88)</p>
+                <p class="count__text">(65)</p>
               </div>
             </div>
           </div>
-          <div class="product__item">
-            <div class="product__image">
-              <img src="./assets/imgs/keyboard.png" alt="" />
-              <div class="product__discount">-35%</div>
-              <div class="wishlist__btn">
-                <img src="./assets/svg/Heart.svg" alt="" />
-                <img src="./assets/svg/Eye.svg" alt="" />
-              </div>
-              <button class="add-to-card">Add To Card</button>
+          <div class="card__item">
+            <div class="card__image container__imgBag">
+              <img class="best__wishlist" src="./assets/svg/Heart.svg" alt="">
+              <img class="best__view" src="./assets/svg/Eye.svg" alt="">
             </div>
-            <div class="product__description">
-              <h4 class="product__name">AK-900 Wired Keyboard</h4>
+            <div class="card__description">
+              <h4 class="product__name">Gucci duffle bag</h4>
               <div class="product__price">
                 <p class="current__price">$960</p>
                 <del class="original__price">$1160</del>
@@ -200,26 +355,41 @@
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <span><img src="./assets/svg/nonestar.svg" alt="" /></span>
-                <p class="count__text">(75)</p>
+                <span><img src="./assets/svg/star-half-filled.svg" alt="" /></span>
+                <p class="count__text">(65)</p>
               </div>
             </div>
           </div>
-          <div class="product__item">
-            <div class="product__image">
-              <img src="./assets/imgs/monitor.png" alt="" />
-              <div class="product__discount">-30%</div>
-              <div class="wishlist__btn">
-                <img src="./assets/svg/Heart.svg" alt="" />
-                <img src="./assets/svg/Eye.svg" alt="" />
-              </div>
-              <button class="add-to-card">Add To Card</button>
+          <div class="card__item">
+            <div class="card__image container__imgCooler">
+              <img class="best__wishlist" src="./assets/svg/Heart.svg" alt="">
+              <img class="best__view" src="./assets/svg/Eye.svg" alt="">
             </div>
-            <div class="product__description">
-              <h4 class="product__name">IPS LCD Gaming Monitor</h4>
+            <div class="card__description">
+              <h4 class="product__name">RGB liquid CPU Cooler</h4>
               <div class="product__price">
-                <p class="current__price">$370</p>
-                <del class="original__price">$400</del>
+                <p class="current__price">$160</p>
+                <del class="original__price">$170</del>
+              </div>
+              <div class="product__rating">
+                <span><img src="./assets/svg/star.svg" alt="" /></span>
+                <span><img src="./assets/svg/star.svg" alt="" /></span>
+                <span><img src="./assets/svg/star.svg" alt="" /></span>
+                <span><img src="./assets/svg/star.svg" alt="" /></span>
+                <span><img src="./assets/svg/star-half-filled.svg" alt="" /></span>
+                <p class="count__text">(65)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card__item">
+            <div class="card__image container__bookSelf">
+              <img class="best__wishlist" src="./assets/svg/Heart.svg" alt="">
+              <img class="best__view" src="./assets/svg/Eye.svg" alt="">
+            </div>
+            <div class="card__description">
+              <h4 class="product__name">Small BookSelf</h4>
+              <div class="product__price">
+                <p class="current__price">$360</p>
               </div>
               <div class="product__rating">
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
@@ -227,43 +397,14 @@
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
                 <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <p class="count__text">(99)</p>
-              </div>
-            </div>
-          </div>
-          <div class="product__item">
-            <div class="product__image">
-              <img src="./assets/imgs/chair.png" alt="" />
-              <div class="product__discount">-25%</div>
-              <div class="wishlist__btn">
-                <img src="./assets/svg/Heart.svg" alt="" />
-                <img src="./assets/svg/Eye.svg" alt="" />
-              </div>
-              <button class="add-to-card">Add To Card</button>
-            </div>
-            <div class="product__description">
-              <h4 class="product__name">S-Series Comfort Chair</h4>
-              <div class="product__price">
-                <p class="current__price">$375</p>
-                <del class="original__price">$400</del>
-              </div>
-              <div class="product__rating">
-                <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <span><img src="./assets/svg/star.svg" alt="" /></span>
-                <span
-                  ><img src="./assets/svg/star-half-filled.svg" alt=""
-                /></span>
-                <p class="count__text">(99)</p>
+                <p class="count__text">(65)</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="products__button">
-          <button class="products-btn">View All Products</button>
-        </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
