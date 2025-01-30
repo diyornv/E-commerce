@@ -871,3 +871,141 @@
 	border-radius: 4px;
 	cursor: pointer;
 }
+
+.new-arrival-section {
+}
+
+.section-header {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.section-header h3 {
+	font-family: Inter;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 48px;
+	letter-spacing: 0.04em;
+	color: #000;
+}
+
+.badge-icon {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.badge-icon p {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #db4444;
+}
+
+.new-arrival-grid {
+	margin-top: 60px;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	row-gap: 32px;
+	column-gap: 30px;
+	margin-bottom: 70px;
+}
+.new-arrival-grid div {
+	color: #fafafa;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.grid--items {
+	margin: 32px 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.grid--items h2 {
+	font-family: Inter;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0.03em;
+}
+
+.grid--items p {
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.shop-now-btn {
+	border: none;
+	background-color: inherit;
+	width: 81px;
+	height: 24px;
+	color: #fff;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	border-bottom: 1px solid #686868;
+	cursor: pointer;
+}
+
+.gap-8 {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.new-arrival-item1 {
+	width: 570px;
+	height: 600px;
+	grid-column: span 4 / span 4;
+	grid-row: span 8 / span 8;
+	background-color: #000;
+	background-image: url(./assets/imgs/ps5.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.new-arrival-item2 {
+	width: 570px;
+	height: 284px;
+	grid-column: span 4 / span 4;
+	grid-row: span 4 / span 4;
+	grid-column-start: 5;
+	background-color: #0d0d0d;
+	background-image: url(./assets/imgs/woman.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.new-arrival-item3 {
+	width: 270px;
+	height: 284px;
+	grid-column: span 2 / span 2;
+	grid-row: span 4 / span 4;
+	grid-column-start: 5;
+	grid-row-start: 5;
+	background-color: #000;
+	background-image: url(./assets/imgs/soundd.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.new-arrival-item4 {
+	width: 270px;
+	height: 284px;
+	grid-column: span 2 / span 2;
+	grid-row: span 4 / span 4;
+	grid-column-start: 7;
+	grid-row-start: 5;
+	background-color: #000;
+	background-image: url(./assets/imgs/gucci.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
