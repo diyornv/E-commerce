@@ -762,9 +762,112 @@
 	cursor: pointer;
 }
 
-input[class='radio-red'] {
+.our__products-top {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+.our__products-top p {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.our-products__item {
+	margin-top: 60px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 60px 30px;
+}
+
+.our__item {
+	width: 270px;
+}
+
+.our__image {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+	height: 250px;
+	border-radius: 4px;
+}
+
+.our__image:hover .add-to-card {
+	opacity: 1;
+}
+.our__description {
+	margin-top: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.our__name {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.our__price {
+	display: flex;
+	gap: 8px;
+}
+
+.our__price-count {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.our__new {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	background-color: #00ff66;
+	padding: 4px 12px;
+	border-radius: 4px;
+	font-family: Poppins;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	color: #fafafa;
+}
+
+.inputs [class='input__red'] {
 	accent-color: red;
 }
-input[class='radio-green'] {
+
+.inputs [class='input__yellow'] {
+	accent-color: yellow;
+}
+.inputs [class='input__black'] {
+	accent-color: black;
+}
+.inputs [class='input__green'] {
 	accent-color: green;
+}
+
+.view__btn {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.view__btn button {
+	border: none;
+	background-color: #db4444;
+	padding: 16px 48px;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	color: #fafafa;
+	border-radius: 4px;
+	cursor: pointer;
 }
