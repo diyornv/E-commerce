@@ -1089,7 +1089,7 @@
 .footer-section {
 	display: flex;
 	grid-template-columns: auto auto auto auto auto;
-	gap: 87px;
+	gap: 77px;
 }
 
 footer {
@@ -1198,4 +1198,32 @@ footer {
 
 a {
 	text-decoration: none;
+}
+
+.app-description {
+	font-family: Poppins;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #fafafa;
+}
+
+.download-app {
+	display: flex;
+	gap: 8px;
+}
+
+.store-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.social-icons {
+	display: flex;
+	gap: 24px;
+}
+
+.social-icons img {
+	cursor: pointer;
 }
