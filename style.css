@@ -191,6 +191,7 @@
 	gap: 24px;
 	align-items: center;
 }
+
 .apple-logo p {
 	font-family: Poppins;
 	font-size: 16px;
@@ -206,12 +207,14 @@
 	line-height: 60px;
 	letter-spacing: 0.04em;
 }
+
 .slide-button {
 	margin-top: 22px;
 	display: flex;
 	gap: 8px;
 	cursor: pointer;
 }
+
 .slide-button p {
 	font-family: Poppins;
 	font-size: 16px;
@@ -315,6 +318,7 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .next__btn {
 	display: flex;
 	align-items: center;
@@ -356,6 +360,7 @@
 	line-height: 18px;
 	color: #fafafa;
 }
+
 .wishlist__btn {
 	position: absolute;
 	display: flex;
@@ -397,6 +402,7 @@
 	flex-direction: column;
 	gap: 8px;
 }
+
 .product__name {
 	font-family: Poppins;
 	font-size: 16px;
@@ -473,8 +479,7 @@
 	margin: 80px 0px 70px 0px;
 }
 
-.category__top {
-}
+.category__top {}
 
 .category__text {
 	display: flex;
@@ -524,6 +529,7 @@
 	background-color: #f5f5f5;
 	cursor: pointer;
 }
+
 .next__btn {
 	width: 46px;
 	height: 46px;
@@ -652,6 +658,7 @@
 	right: 12px;
 	cursor: pointer;
 }
+
 .best__view {
 	position: absolute;
 	top: 54px;
@@ -669,9 +676,11 @@
 .container__imgBag {
 	background-image: url(./assets/imgs/bag.png);
 }
+
 .container__imgCooler {
 	background-image: url(./assets/imgs/cooler.png);
 }
+
 .container__bookSelf {
 	background-image: url(./assets/imgs/bookSelf.png);
 }
@@ -767,6 +776,7 @@
 	gap: 16px;
 	align-items: center;
 }
+
 .our__products-top p {
 	font-family: Poppins;
 	font-size: 16px;
@@ -798,6 +808,7 @@
 .our__image:hover .add-to-card {
 	opacity: 1;
 }
+
 .our__description {
 	margin-top: 16px;
 	display: flex;
@@ -845,9 +856,11 @@
 .inputs [class='input__yellow'] {
 	accent-color: yellow;
 }
+
 .inputs [class='input__black'] {
 	accent-color: black;
 }
+
 .inputs [class='input__green'] {
 	accent-color: green;
 }
@@ -859,6 +872,7 @@
 	justify-content: center;
 	align-items: center;
 }
+
 .view__btn button {
 	border: none;
 	background-color: #db4444;
@@ -872,8 +886,7 @@
 	cursor: pointer;
 }
 
-.new-arrival-section {
-}
+.new-arrival-section {}
 
 .section-header {
 	display: flex;
@@ -913,12 +926,14 @@
 	column-gap: 30px;
 	margin-bottom: 70px;
 }
+
 .new-arrival-grid div {
 	color: #fafafa;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 }
+
 .grid--items {
 	margin: 32px 32px;
 	display: flex;
@@ -1151,6 +1166,7 @@ footer {
 	border: none;
 	cursor: pointer;
 }
+
 .form__input-btn img {
 	width: 24px;
 	height: 24px;
@@ -1252,4 +1268,103 @@ a {
 	font-weight: 400;
 	line-height: 24px;
 	opacity: 0.4;
+}
+
+
+.signup {
+	display: flex;
+	gap: 100px;
+	margin: 60px 100px 140px 0px;
+}
+
+.signup-top {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.signup-top h3 {
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 30px;
+	letter-spacing: 4%;
+}
+
+.signup-top p {
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0%;
+
+}
+
+.signup-form {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+
+.signup-form input {
+	width: 370px;
+	height: 32px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+}
+
+.signup-form button {
+	width: 370px;
+	height: 50px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 0px;
+	font-family: Poppins;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	cursor: pointer;
+	border: none;
+}
+
+.create-acc {
+	background-color: #db4444;
+	color: #fff;
+
+}
+
+.googe-sign {
+	color: #000;
+	display: flex;
+	gap: 10px;
+}
+
+.signup-form span {
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0%;
+
+}
+
+.signup-form span a {
+	font-family: Poppins;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0%;
+	color: #4D4D4D;
+	text-decoration: underline;
+
 }
