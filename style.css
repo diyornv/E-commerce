@@ -10,6 +10,8 @@
 .container {
   max-width: 1170px;
   margin: 0 auto;
+  /* padding: 0 270px; */
+  /* border: 1px solid blue; */
 }
 
 .banner {
@@ -171,6 +173,7 @@
 
 .hero {
   display: flex;
+  justify-content: space-between;
 }
 
 .hero-slider {
@@ -329,7 +332,7 @@
   margin-top: 40px;
   margin-bottom: 60px;
   display: grid;
-  gap: 60px 30px;
+  gap: 60px 20px;
   grid-template-columns: auto auto auto auto;
 }
 
@@ -786,7 +789,7 @@
   margin-top: 60px;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 60px 30px;
+  gap: 60px 20px;
 }
 
 .our__item {
@@ -1264,100 +1267,4 @@ a {
   font-weight: 400;
   line-height: 24px;
   opacity: 0.4;
-}
-
-.signup {
-  display: flex;
-  gap: 100px;
-  max-width: 1440px;
-  /* margin: 0 100 100 100; */
-  /* margin: 60px 100px 140px 0px; */
-  justify-content: space-between;
-}
-
-.signup-top {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.signup-top h3 {
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 30px;
-  letter-spacing: 4%;
-}
-
-.signup-top p {
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-}
-
-.signup-form {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.signup-form input {
-  width: 370px;
-  height: 32px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid black;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.signup-form button {
-  width: 370px;
-  height: 50px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 0px;
-  font-family: Poppins;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  cursor: pointer;
-  border: none;
-}
-
-.create-acc {
-  background-color: #db4444;
-  color: #fff;
-}
-
-.googe-sign {
-  color: #000;
-  display: flex;
-  gap: 10px;
-}
-
-.signup-form span {
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-}
-
-.signup-form span a {
-  font-family: Poppins;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  color: #4d4d4d;
-  text-decoration: underline;
 }
