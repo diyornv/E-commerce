@@ -139,6 +139,11 @@
   background-position: right 12px center;
 }
 
+.card_icon {
+  display: flex;
+  gap: 15px;
+}
+
 .card_icon img {
   cursor: pointer;
 }
@@ -1267,4 +1272,74 @@ a {
   font-weight: 400;
   line-height: 24px;
   opacity: 0.4;
+}
+
+.modal {
+  position: relative;
+  display: inline-block;
+}
+
+.profile__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile__icon:hover {
+  background-color: #e74c4c;
+}
+
+.modal__list {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 260px;
+  border-radius: 4px;
+  backdrop-filter: blur(150px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.modal:hover .modal__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.modal__list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal__list li {
+  display: block;
+}
+
+.modal__list li a {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 18px 12px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.modal__list li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.model__link` {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
 }
