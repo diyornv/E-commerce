@@ -62,7 +62,6 @@
   margin-top: 40px;
   margin-bottom: 16px;
   padding: 0px 10px;
-  padding-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1295,7 +1294,7 @@ a {
 
 .modal__list {
   position: absolute;
-  top: 60px;
+  top: 55px;
   right: 0;
   width: 260px;
   border-radius: 4px;
