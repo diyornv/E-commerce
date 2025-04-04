@@ -82,12 +82,13 @@
   right: 12px;
   width: 34px;
   height: 34px;
-  background-color: rgb(255, 0, 0);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  background: none;
   border: none;
   cursor: pointer;
-  font-size: 18px;
 }
 
 .wishlist__item-name {
@@ -127,7 +128,7 @@
   background-color: #000;
   color: white;
   border: none;
-  padding: 12px;
+  padding: 9px;
   cursor: pointer;
   display: flex;
   align-items: center;
