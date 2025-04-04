@@ -1300,15 +1300,13 @@ a {
   width: 260px;
   border-radius: 4px;
   backdrop-filter: blur(150px);
-  background: rgba(0, 0, 0, 0.04);
+  background-color: rgba(67, 58, 68);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
   z-index: 100;
 }
-
-
 
 .modal:hover .modal__list {
   opacity: 1;
