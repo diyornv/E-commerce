@@ -10,8 +10,6 @@
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  /* padding: 0 270px; */
-  /* border: 1px solid blue; */
 }
 
 .banner {
@@ -61,7 +59,6 @@
 .navbar {
   margin-top: 40px;
   margin-bottom: 16px;
-  padding: 0px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
