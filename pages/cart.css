@@ -4,10 +4,11 @@
   padding: 80px 0 140px 0;
 }
 
-.breadcrumb {
+.cartpage_nav {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+  gap: 8px;
   font-family: Poppins;
   font-weight: 400;
   font-size: 14px;
@@ -15,13 +16,9 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.breadcrumb a {
+.cartpage_nav a {
   color: #666;
   text-decoration: none;
-}
-
-.breadcrumb span {
-  margin: 0 8px;
 }
 
 .cartpage {
@@ -31,7 +28,7 @@
 .cartpage__header {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
-  padding: 24px 0px 24px 40px;
+  padding: 24px 0 24px 40px;
   margin-bottom: 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
@@ -39,15 +36,15 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  color: rgba(0, 0, 0, 1);
 }
 
 .cartpage__item {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-  padding: 24px 0px 24px 40px;
   align-items: center;
-  background-color: #fff;
-  margin-bottom: 20px;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  padding: 24px 0 24px 40px;
+  margin-bottom: 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
   font-family: Poppins;
@@ -63,8 +60,6 @@
 }
 
 .cartpage__img {
-  width: 80px;
-  height: 60px;
   margin-right: 22px;
   display: flex;
   align-items: center;
@@ -73,11 +68,11 @@
 
 .remove-icon {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: -10px;
+  left: -10px;
   width: 18px;
   height: 18px;
-  background-color: red;
+  background-color: rgba(219, 68, 68, 1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -90,27 +85,27 @@
   width: 72px;
   height: 44px;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  outline: none;
+  border: 1.5px solid rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+  outline: none;
   padding: 0 12px;
-  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .cart-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
 }
 
 .cart-actions button {
-  padding: 12px 24px;
-  border: 1px solid #ddd;
-  background-color: white;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  transition: all 0.2s;
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
@@ -121,12 +116,10 @@
   background-color: #f5f5f5;
 }
 
-.return-shop-button {
+.return-to-shop {
   width: 218px;
-  height: 56px;
 }
 
-.update-cart-button {
+.update-cart {
   width: 195px;
-  height: 56px;
 }
