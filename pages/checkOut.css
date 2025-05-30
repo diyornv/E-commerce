@@ -1,0 +1,37 @@
+.breadcrumb {
+  padding: 80px 0;
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 12px;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb__link {
+  text-decoration: none;
+  color: #888;
+}
+
+.breadcrumb__link:hover {
+  color: #000;
+}
+
+.breadcrumb__link-active {
+  font-weight: 500;
+  color: #000;
+  pointer-events: none;
+}
+
+.breadcrumb__stick {
+  color: #888;
+}
