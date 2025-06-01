@@ -41,9 +41,12 @@
   justify-content: space-between;
 }
 
+.checkout-billing {
+  margin-bottom: 140px;
+}
+
 .billing {
   font-family: Poppins;
-  margin-bottom: 140px;
 }
 
 .billing__heading {
@@ -104,4 +107,126 @@
   accent-color: #db4444;
   width: 18px;
   height: 18px;
+}
+
+.summary {
+  width: 425px;
+}
+
+.summary-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.summary-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.flex {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.summary-total {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.summary-subtotal {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #888;
+  padding-bottom: 16px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-check {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.summary-bank {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-radio {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.flex-radio input[type="radio"] {
+  accent-color: black;
+  width: 24px;
+  height: 24px;
+}
+
+.summary-coupon {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  width: 527px;
+}
+
+.summary-coupon input {
+  padding: 16px 24px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #000;
+  width: 300px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.summary-coupon button {
+  width: 211px;
+  background-color: #db4444;
+  border-radius: 4px;
+  border: none;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+.summary-btn {
+  margin-top: 32px;
+  width: 190px;
+  height: 56px;
+  background-color: #db4444;
+  border-radius: 4px;
+  border: none;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fafafa;
+  cursor: pointer;
 }
