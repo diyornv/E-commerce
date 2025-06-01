@@ -129,52 +129,56 @@
           </li>
         </ol>
       </nav>
+
       <div class="checkout-billing">
-        <section class="billing">
-          <h2 class="billing__heading">Billing Details</h2>
+        <h2 class="billing__heading">Billing Details</h2>
+        <div class="billing-flex">
+          <section class="billing">
+            <form class="billing__form">
+              <div class="billing-group">
+                <label>First Name <span>*</span></label>
+                <input type="text" />
+              </div>
+              <div class="billing-group">
+                <label>Company Name</label>
+                <input type="text" />
+              </div>
 
-          <form class="billing__form">
-            <div class="billing-group">
-              <label>First Name<span>*</span></label>
-              <input type="text" />
-            </div>
+              <div class="billing-group">
+                <label>Street Address<span>*</span></label>
+                <input type="text" />
+              </div>
+              <div class="billing-group">
+                <label>Apartment, floor, etc. (optional)</label>
+                <input type="text" />
+              </div>
+              <div class="billing-group">
+                <label>Town/City <span>*</span></label>
+                <input type="text" />
+              </div>
+              <div class="billing-group">
+                <label>First Phone Number <span>*</span></label>
+                <input type="tel" />
+              </div>
+              <div class="billing-group">
+                <label>Email Address <span>*</span></label>
+                <input type="email" />
+              </div>
 
-            <div class="billing-group">
-              <label>Company Name</label>
-              <input type="text" />
+              <div class="form-check">
+                <input type="checkbox" />
+                <p>Save this information for faster check-out next time</p>
+              </div>
+            </form>
+          </section>
+          <section class="summary">
+            <div>
+              <div>
+                <img src="" alt="">
+              </div>
             </div>
-
-            <div class="billing-group">
-              <label>Street Address<span>*</span></label>
-              <input type="text" />
-            </div>
-
-            <div class="billing-group">
-              <label>Apartment, floor, etc. (optional)</label>
-              <input type="text" />
-            </div>
-
-            <div class="billing-group">
-              <label>Town/City<span>*</span></label>
-              <input type="text" />
-            </div>
-
-            <div class="billing-group">
-              <label>Phone Number<span>*</span></label>
-              <input type="tel" />
-            </div>
-
-            <div class="billing-group">
-              <label>Email Address<span>*</span></label>
-              <input type="email" />
-            </div>
-
-            <div class="form-check">
-              <input type="checkbox" />
-              <p>Save this information for faster check-out next time</p>
-            </div>
-          </form>
-        </section>
+          </section>
+        </div>
       </div>
     </main>
     <footer>
