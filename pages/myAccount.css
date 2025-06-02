@@ -13,3 +13,51 @@
 .welcome-message span {
   color: #db4444;
 }
+
+.account-menu {
+  display: flex;
+  font-family: Poppins;
+}
+
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+.nav-section ul {
+  list-style: none;
+  margin-left: 35px;
+  margin-top: 16px;
+}
+
+.nav-section li {
+  margin-bottom: 8px;
+}
+
+.nav-section a {
+  text-decoration: none;
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.nav-section li.active a {
+  color: #db4444;
+  font-weight: 500;
+}
+
+.nav-section a:hover {
+  color: #000;
+}
