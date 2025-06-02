@@ -1,0 +1,15 @@
+.flex-acc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-message {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.welcome-message span {
+  color: #db4444;
+}
