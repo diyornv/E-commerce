@@ -1,0 +1,56 @@
+.container-ab {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 370px;
+}
+.breadcrumb-about {
+  display: flex;
+  gap: 12px;
+}
+
+main {
+  padding: 80px 0px 140px 0;
+}
+.breadcrumb-about a {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000;
+}
+
+.about-bread {
+  color: #808080;
+}
+
+.about-container {
+  display: flex;
+  margin-top: 42px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-container h1 {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: 6%;
+  margin-bottom: 40px;
+}
+
+.about-container p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+.about-img img {
+  border-radius: 4px;
+}
+
+.about-text {
+  width: 525px;
+}
