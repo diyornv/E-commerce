@@ -17,6 +17,7 @@
 .account-menu {
   display: flex;
   font-family: Poppins;
+  justify-content: space-between;
 }
 
 .account-nav {
@@ -60,4 +61,92 @@
 
 .nav-section a:hover {
   color: #000;
+}
+
+.profile-edit-form {
+  padding: 40px 80px;
+  /* border: 1px solid red; */
+  box-shadow: 0px 1px 13px 0px #0000000d;
+  margin-bottom: 140px;
+}
+
+.profile-edit-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #db4444;
+}
+
+.label-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-flex {
+  display: flex;
+  gap: 50px;
+}
+
+form {
+  margin-top: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+form input {
+  background-color: #f5f5f5;
+  padding: 13px 16px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  height: 50px;
+}
+.form-flex input {
+  width: 330px;
+}
+
+.label-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-edit-form button {
+  margin-top: 24px;
+  padding: 16px 48px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancel-btn {
+  background-color: inherit;
+}
+.save-btn {
+  background-color: #db4444;
+  color: white;
+}
+
+.btn-end {
+  display: flex;
+  justify-content: end;
+}
+
+input::placeholder {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
