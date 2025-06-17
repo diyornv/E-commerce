@@ -1,7 +1,6 @@
 .container-ab {
-  max-width: 1920px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding-left: 370px;
 }
 .breadcrumb-about {
   display: flex;
@@ -47,10 +46,36 @@ main {
   margin-bottom: 24px;
 }
 
+.about-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .about-img img {
   border-radius: 4px;
+  max-width: 100%;
+  height: auto;
 }
 
 .about-text {
   width: 525px;
+  margin-right: 40px;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-text {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .about-img img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
 }
