@@ -1341,3 +1341,45 @@ a {
   font-size: 14px;
   line-height: 21px;
 }
+
+.slider-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 5px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.slider-dot.active {
+  background: #db4444;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slider-content {
+  transition: none;
+}
+.slide-in-right {
+  animation: slideInRight 0.5s;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
