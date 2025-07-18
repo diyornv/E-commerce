@@ -94,9 +94,6 @@ let timerInterval = setInterval(updateTimer, 1000);
 updateTimer;
 
 // Diyorbek nurullayev
-
-// Modal uchun kod
-// Modal HTML-ni dinamik qo'shamiz (agar hali mavjud bo'lmasa)
 if (!document.getElementById('productModal')) {
   const modalHtml = `
     <div id="productModal" class="modal-overlay" style="display:none;">
@@ -124,7 +121,6 @@ function openProductModal(parent) {
   document.getElementById('productModal').style.display = 'flex';
 }
 
-// Barcha "ko'z" (Eye) ikonchalariga event qo'shamiz
 function setupProductModalEvents() {
   document.querySelectorAll('.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]').forEach(function(img) {
     if (img.src.includes('Eye')) {
