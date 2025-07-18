@@ -94,3 +94,59 @@ let timerInterval = setInterval(updateTimer, 1000);
 updateTimer;
 
 // Diyorbek nurullayev
+
+// Modal uchun kod
+// Modal HTML-ni dinamik qo'shamiz (agar hali mavjud bo'lmasa)
+if (!document.getElementById('productModal')) {
+  const modalHtml = `
+    <div id="productModal" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="close-modal" style="cursor:pointer;">&times;</span>
+        <img id="modalImg" src="" alt="" style="max-width:200px;"/>
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice"></p>
+        <div id="modalRating"></div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+}
+
+function openProductModal(parent) {
+  const image = parent.querySelector('img:not([src*="Heart"], [src*="Eye"])');
+  const title = parent.querySelector('.product__name, .our__name, .card__description h4');
+  const price = parent.querySelector('.current__price, .our__price-count');
+  const rating = parent.querySelector('.product__rating');
+  document.getElementById('modalImg').src = image ? image.src : '';
+  document.getElementById('modalTitle').textContent = title ? title.textContent : '';
+  document.getElementById('modalPrice').textContent = price ? price.textContent : '';
+  document.getElementById('modalRating').innerHTML = rating ? rating.innerHTML : '';
+  document.getElementById('productModal').style.display = 'flex';
+}
+
+// Barcha "ko'z" (Eye) ikonchalariga event qo'shamiz
+function setupProductModalEvents() {
+  document.querySelectorAll('.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]').forEach(function(img) {
+    if (img.src.includes('Eye')) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function(e) {
+        let parent = img.closest('.product__item') || img.closest('.our__item') || img.closest('.card__item');
+        if (parent) openProductModal(parent);
+      });
+    }
+  });
+}
+
+setupProductModalEvents();
+
+// Modalni yopish uchun
+if (document.querySelector('.close-modal')) {
+  document.querySelector('.close-modal').onclick = function() {
+    document.getElementById('productModal').style.display = 'none';
+  };
+}
+if (document.getElementById('productModal')) {
+  document.getElementById('productModal').onclick = function(e) {
+    if (e.target === this) this.style.display = 'none';
+  };
+}
