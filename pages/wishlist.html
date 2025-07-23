@@ -108,99 +108,7 @@
 
         <!-- Grid section -->
         <div class="wishlist-grid">
-          <div class="wishlist__item">
-            <div class="wishlist__item-img">
-              <span class="discount-badge">-35%</span>
-              <button class="delete__icon">
-                <img src="../assets/svg/trash.svg" alt="" />
-              </button>
-              <img
-                src="../assets/imgs/girls-bag.png"
-                alt="Gucci duffle bag"
-                class="item-image"
-              />
-              <button class="add-to-cart">
-                <span class="cart-icon">
-                  <img src="../assets/svg/Cart1-white.svg" alt="" />
-                </span>
-                Add To Cart
-              </button>
-            </div>
-            <h3 class="wishlist__item-name">Gucci duffle bag</h3>
-            <div class="wishlist__item-price">
-              <span class="current-price">$960</span>
-              <span class="original-price">$1160</span>
-            </div>
-          </div>
-
-          <div class="wishlist__item">
-            <div class="wishlist__item-img">
-              <button class="delete__icon">
-                <img src="../assets/svg/trash.svg" alt="" />
-              </button>
-              <img
-                src="../assets/imgs/gamma.png"
-                alt="Gamma sambufer"
-                class="item-image"
-              />
-              <button class="add-to-cart">
-                <span class="cart-icon">
-                  <img src="../assets/svg/Cart1-white.svg" alt="" />
-                </span>
-                Add To Cart
-              </button>
-            </div>
-            <h3 class="wishlist__item-name">Gucci duffle bag</h3>
-            <div class="wishlist__item-price">
-              <span class="current-price">$960</span>
-            </div>
-          </div>
-
-          <div class="wishlist__item">
-            <div class="wishlist__item-img">
-              <button class="delete__icon">
-                <img src="../assets/svg/trash.svg" alt="" />
-              </button>
-              <img
-                src="../assets/imgs/GP11.png"
-                alt="Joystick"
-                class="item-image"
-              />
-              <button class="add-to-cart">
-                <span class="cart-icon">
-                  <img src="../assets/svg/Cart1-white.svg" alt="" />
-                </span>
-                Add To Cart
-              </button>
-            </div>
-            <h3 class="wishlist__item-name">Gucci duffle bag</h3>
-            <div class="wishlist__item-price">
-              <span class="current-price">$960</span>
-            </div>
-          </div>
-
-          <div class="wishlist__item">
-            <div class="wishlist__item-img">
-              <button class="delete__icon">
-                <img src="../assets/svg/trash.svg" alt="" />
-              </button>
-              <img
-                src="../assets/imgs/jacket.png"
-                alt="Jacket"
-                class="item-image"
-              />
-              <button class="add-to-cart">
-                <span class="cart-icon">
-                  <img src="../assets/svg/Cart1-white.svg" alt="" />
-                </span>
-                Add To Cart
-              </button>
-            </div>
-            <h3 class="wishlist__item-name">Gucci duffle bag</h3>
-            <div class="wishlist__item-price">
-              <span class="current-price">$960</span>
-            </div>
-          </div>
+          <!-- Wishlist items will be rendered here by JS -->
         </div>
         <!-- Grid section end -->
 
@@ -452,5 +360,66 @@
         <p>Copyright Rimel 2022. All right reserved</p>
       </div>
     </footer>
+    <script>
+      // Render wishlist from localStorage
+      function getWishlist() {
+        return JSON.parse(localStorage.getItem("wishlist") || "[]");
+      }
+      function setWishlist(wishlist) {
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      }
+      function removeFromWishlist(name) {
+        let wishlist = getWishlist();
+        wishlist = wishlist.filter((item) => item.name !== name);
+        setWishlist(wishlist);
+      }
+      function renderWishlist() {
+        const grid = document.querySelector(".wishlist-grid");
+        const title = document.querySelector(".wishlist-title");
+        const wishlist = getWishlist();
+        title.textContent = `Wishlist (${wishlist.length})`;
+        if (!grid) return;
+        grid.innerHTML = "";
+        if (wishlist.length === 0) {
+          grid.innerHTML =
+            '<p style="grid-column: 1/-1; text-align:center;">No items in wishlist.</p>';
+          return;
+        }
+        wishlist.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = "wishlist__item";
+          card.innerHTML = `
+            <div class="wishlist__item-img">
+              ${
+                item.discount
+                  ? `<span class='discount-badge'>${item.discount}</span>`
+                  : ""
+              }
+              <button class="delete__icon"><img src="../assets/svg/trash.svg" alt="" /></button>
+              <img src="${item.img}" alt="${item.name}" class="item-image" />
+              <button class="add-to-cart">
+                <span class="cart-icon"><img src="../assets/svg/Cart1-white.svg" alt="" /></span>
+                Add To Cart
+              </button>
+            </div>
+            <h3 class="wishlist__item-name">${item.name}</h3>
+            <div class="wishlist__item-price">
+              <span class="current-price">${item.price}</span>
+              ${
+                item.original
+                  ? `<span class="original-price">${item.original}</span>`
+                  : ""
+              }
+            </div>
+          `;
+          card.querySelector(".delete__icon").onclick = function () {
+            removeFromWishlist(item.name);
+            renderWishlist();
+          };
+          grid.appendChild(card);
+        });
+      }
+      document.addEventListener("DOMContentLoaded", renderWishlist);
+    </script>
   </body>
 </html>

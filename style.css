@@ -1387,9 +1387,14 @@ a {
 /* Modal uchun CSS */
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex; align-items: center; justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
 }
 .modal-content {
@@ -1402,7 +1407,20 @@ a {
 }
 .close-modal {
   position: absolute;
-  top: 10px; right: 20px;
+  top: 10px;
+  right: 20px;
   font-size: 28px;
   font-weight: bold;
+}
+
+.active-heart {
+  filter: none !important;
+  fill: #ff0000 !important;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ff0000, 0 2px 8px 0 rgba(255, 0, 0, 0.15);
+  outline: 2px solid #ff0000;
+  outline-offset: 2px;
+  /* Animate for click effect */
+  transform: scale(1.15);
+  transition: box-shadow 0.2s, outline 0.2s, transform 0.1s;
 }

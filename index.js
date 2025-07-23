@@ -94,7 +94,7 @@ let timerInterval = setInterval(updateTimer, 1000);
 updateTimer;
 
 // Diyorbek nurullayev
-if (!document.getElementById('productModal')) {
+if (!document.getElementById("productModal")) {
   const modalHtml = `
     <div id="productModal" class="modal-overlay" style="display:none;">
       <div class="modal-content">
@@ -106,43 +106,125 @@ if (!document.getElementById('productModal')) {
       </div>
     </div>
   `;
-  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  document.body.insertAdjacentHTML("beforeend", modalHtml);
 }
 
 function openProductModal(parent) {
   const image = parent.querySelector('img:not([src*="Heart"], [src*="Eye"])');
-  const title = parent.querySelector('.product__name, .our__name, .card__description h4');
-  const price = parent.querySelector('.current__price, .our__price-count');
-  const rating = parent.querySelector('.product__rating');
-  document.getElementById('modalImg').src = image ? image.src : '';
-  document.getElementById('modalTitle').textContent = title ? title.textContent : '';
-  document.getElementById('modalPrice').textContent = price ? price.textContent : '';
-  document.getElementById('modalRating').innerHTML = rating ? rating.innerHTML : '';
-  document.getElementById('productModal').style.display = 'flex';
+  const title = parent.querySelector(
+    ".product__name, .our__name, .card__description h4"
+  );
+  const price = parent.querySelector(".current__price, .our__price-count");
+  const rating = parent.querySelector(".product__rating");
+  document.getElementById("modalImg").src = image ? image.src : "";
+  document.getElementById("modalTitle").textContent = title
+    ? title.textContent
+    : "";
+  document.getElementById("modalPrice").textContent = price
+    ? price.textContent
+    : "";
+  document.getElementById("modalRating").innerHTML = rating
+    ? rating.innerHTML
+    : "";
+  document.getElementById("productModal").style.display = "flex";
 }
 
 function setupProductModalEvents() {
-  document.querySelectorAll('.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]').forEach(function(img) {
-    if (img.src.includes('Eye')) {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', function(e) {
-        let parent = img.closest('.product__item') || img.closest('.our__item') || img.closest('.card__item');
-        if (parent) openProductModal(parent);
-      });
-    }
-  });
+  document
+    .querySelectorAll(
+      '.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]'
+    )
+    .forEach(function (img) {
+      if (img.src.includes("Eye")) {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function (e) {
+          let parent =
+            img.closest(".product__item") ||
+            img.closest(".our__item") ||
+            img.closest(".card__item");
+          if (parent) openProductModal(parent);
+        });
+      }
+    });
 }
 
 setupProductModalEvents();
 
-// Modalni yopish uchun
-if (document.querySelector('.close-modal')) {
-  document.querySelector('.close-modal').onclick = function() {
-    document.getElementById('productModal').style.display = 'none';
+if (document.querySelector(".close-modal")) {
+  document.querySelector(".close-modal").onclick = function () {
+    document.getElementById("productModal").style.display = "none";
   };
 }
-if (document.getElementById('productModal')) {
-  document.getElementById('productModal').onclick = function(e) {
-    if (e.target === this) this.style.display = 'none';
+if (document.getElementById("productModal")) {
+  document.getElementById("productModal").onclick = function (e) {
+    if (e.target === this) this.style.display = "none";
   };
 }
+//  Modal end
+
+// --- Flash Sales Wishlist (Minimal) ---
+function getWishlist() {
+  return JSON.parse(localStorage.getItem("wishlist") || "[]");
+}
+function setWishlist(wishlist) {
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+}
+function isInWishlist(productName) {
+  return getWishlist().some((item) => item.name === productName);
+}
+function toggleWishlist(product) {
+  let wishlist = getWishlist();
+  const idx = wishlist.findIndex((item) => item.name === product.name);
+  if (idx === -1) wishlist.push(product);
+  else wishlist.splice(idx, 1);
+  setWishlist(wishlist);
+}
+function updateFlashSalesHearts() {
+  document
+    .querySelectorAll(
+      '.products .product__item .wishlist__btn img[src$="Heart.svg"]'
+    )
+    .forEach(function (heart) {
+      let parent = heart.closest(".product__item");
+      if (!parent) return;
+      let name = parent.querySelector(".product__name");
+      if (!name) return;
+      if (isInWishlist(name.textContent.trim())) {
+        heart.classList.add("active-heart");
+      } else {
+        heart.classList.remove("active-heart");
+      }
+    });
+}
+function setupFlashSalesWishlistEvents() {
+  document
+    .querySelectorAll(
+      '.products .product__item .wishlist__btn img[src$="Heart.svg"]'
+    )
+    .forEach(function (heart) {
+      heart.style.cursor = "pointer";
+      heart.onclick = function () {
+        let parent = heart.closest(".product__item");
+        if (!parent) return;
+        let name = parent.querySelector(".product__name");
+        let img = parent.querySelector('img:not([src*="Heart"], [src*="Eye"])');
+        let price = parent.querySelector(".current__price");
+        let original = parent.querySelector(".original__price");
+        let discount = parent.querySelector(".product__discount");
+        let product = {
+          name: name ? name.textContent.trim() : "",
+          img: img ? img.src : "",
+          price: price ? price.textContent.trim() : "",
+          original: original ? original.textContent.trim() : "",
+          discount: discount ? discount.textContent.trim() : "",
+        };
+        toggleWishlist(product);
+        updateFlashSalesHearts();
+      };
+    });
+}
+window.addEventListener("DOMContentLoaded", function () {
+  updateFlashSalesHearts();
+  setupFlashSalesWishlistEvents();
+});
+// --- End Flash Sales Wishlist ---
