@@ -53,6 +53,7 @@ function getDeadline() {
     now.setTime(now.getTime() + 3 * 24 * 60 * 60 * 1000);
     deadline = now.toISOString();
     localStorage.setItem("flashSaleDeadline", deadline);
+    localStorage.removeItem("flashSaleAlertShown");
   }
 
   return new Date(deadline);
@@ -69,7 +70,12 @@ function updateTimer() {
     document.getElementById("hours").textContent = "00";
     document.getElementById("minutes").textContent = "00";
     document.getElementById("seconds").textContent = "00";
-    alert("Aksiya Yakunlandi!");
+
+    const alertShown = localStorage.getItem("flashSaleAlertShown");
+    if (!alertShown) {
+      alert("Aksiya Yakunlandi!");
+      localStorage.setItem("flashSaleAlertShown", "true");
+    }
     return;
   }
 
