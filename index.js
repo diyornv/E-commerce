@@ -82,11 +82,11 @@ function updateTimer() {
   document.getElementById("hours").textContent = String(hours).padStart(2, "0");
   document.getElementById("minutes").textContent = String(minutes).padStart(
     2,
-    "0"
+    "0",
   );
   document.getElementById("seconds").textContent = String(seconds).padStart(
     2,
-    "0"
+    "0",
   );
 }
 
@@ -112,7 +112,7 @@ if (!document.getElementById("productModal")) {
 function openProductModal(parent) {
   const image = parent.querySelector('img:not([src*="Heart"], [src*="Eye"])');
   const title = parent.querySelector(
-    ".product__name, .our__name, .card__description h4"
+    ".product__name, .our__name, .card__description h4",
   );
   const price = parent.querySelector(".current__price, .our__price-count");
   const rating = parent.querySelector(".product__rating");
@@ -132,7 +132,7 @@ function openProductModal(parent) {
 function setupProductModalEvents() {
   document
     .querySelectorAll(
-      '.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]'
+      '.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]',
     )
     .forEach(function (img) {
       if (img.src.includes("Eye")) {
@@ -182,7 +182,7 @@ function toggleWishlist(product) {
 function updateFlashSalesHearts() {
   document
     .querySelectorAll(
-      '.products .product__item .wishlist__btn img[src$="Heart.svg"]'
+      '.products .product__item .wishlist__btn img[src$="Heart.svg"]',
     )
     .forEach(function (heart) {
       let parent = heart.closest(".product__item");
@@ -199,7 +199,7 @@ function updateFlashSalesHearts() {
 function setupFlashSalesWishlistEvents() {
   document
     .querySelectorAll(
-      '.products .product__item .wishlist__btn img[src$="Heart.svg"]'
+      '.products .product__item .wishlist__btn img[src$="Heart.svg"]',
     )
     .forEach(function (heart) {
       heart.style.cursor = "pointer";
@@ -227,4 +227,3 @@ window.addEventListener("DOMContentLoaded", function () {
   updateFlashSalesHearts();
   setupFlashSalesWishlistEvents();
 });
-// --- End Flash Sales Wishlist ---
