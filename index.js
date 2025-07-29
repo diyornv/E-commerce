@@ -228,32 +228,20 @@ window.addEventListener("DOMContentLoaded", function () {
   setupFlashSalesWishlistEvents();
 });
 
-
-
-
-
-
-
-
-
-// Cart functionality
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Add to cart function
 function addToCart(productName, price, image) {
   const product = { name: productName, price: price, image: image };
   cart.push(product);
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Update button state
 function updateButtonState(button, productName) {
   const isInCart = cart.some((item) => item.name === productName);
   button.textContent = isInCart ? "Added" : "Add To Card";
   button.classList.toggle("added", isInCart);
 }
 
-// Update cart count display
 function updateCartCount() {
   const cartCount = cart.length;
   const cartIcon = document.querySelector(
@@ -273,7 +261,6 @@ function updateCartCount() {
   }
 }
 
-// Initialize page
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".add-to-card");
 
@@ -283,10 +270,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const price = productItem.querySelector(".current__price").textContent;
     const image = productItem.querySelector("img").src;
 
-    // Restore button state
     updateButtonState(button, productName);
 
-    // Add click event
     button.addEventListener("click", function () {
       const isInCart = cart.some((item) => item.name === productName);
 
@@ -298,6 +283,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize cart count
   updateCartCount();
 });

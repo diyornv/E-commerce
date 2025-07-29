@@ -1,18 +1,14 @@
-// Cart page functionality
 function displayCart() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartContainer = document.querySelector(".cartpage");
 
   if (!cartContainer) return;
 
-  // Find the header and items
   const header = cartContainer.querySelector(".cartpage__header");
   const existingItems = cartContainer.querySelectorAll(".cartpage__item");
 
-  // Remove existing items (except header)
   existingItems.forEach((item) => item.remove());
 
-  // Add cart items
   cart.forEach((product) => {
     const itemHtml = `
             <div class="cartpage__item">
@@ -33,11 +29,9 @@ function displayCart() {
             </div>
         `;
 
-    // Insert after header
     header.insertAdjacentHTML("afterend", itemHtml);
   });
 
-  // Update total
   updateCartTotal();
 }
 
@@ -63,7 +57,6 @@ function updateCartTotal() {
   }
 }
 
-// Initialize cart page
 document.addEventListener("DOMContentLoaded", function () {
   displayCart();
 });
