@@ -228,6 +228,14 @@ window.addEventListener("DOMContentLoaded", function () {
   setupFlashSalesWishlistEvents();
 });
 
+
+
+
+
+
+
+
+
 // Cart functionality
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
