@@ -82,11 +82,11 @@ function updateTimer() {
   document.getElementById("hours").textContent = String(hours).padStart(2, "0");
   document.getElementById("minutes").textContent = String(minutes).padStart(
     2,
-    "0",
+    "0"
   );
   document.getElementById("seconds").textContent = String(seconds).padStart(
     2,
-    "0",
+    "0"
   );
 }
 
@@ -112,7 +112,7 @@ if (!document.getElementById("productModal")) {
 function openProductModal(parent) {
   const image = parent.querySelector('img:not([src*="Heart"], [src*="Eye"])');
   const title = parent.querySelector(
-    ".product__name, .our__name, .card__description h4",
+    ".product__name, .our__name, .card__description h4"
   );
   const price = parent.querySelector(".current__price, .our__price-count");
   const rating = parent.querySelector(".product__rating");
@@ -132,7 +132,7 @@ function openProductModal(parent) {
 function setupProductModalEvents() {
   document
     .querySelectorAll(
-      '.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]',
+      '.wishlist__btn img, .best__view, .card__image img[src$="Eye.svg"], .our__image img[src$="Eye.svg"]'
     )
     .forEach(function (img) {
       if (img.src.includes("Eye")) {
@@ -182,7 +182,7 @@ function toggleWishlist(product) {
 function updateFlashSalesHearts() {
   document
     .querySelectorAll(
-      '.products .product__item .wishlist__btn img[src$="Heart.svg"]',
+      '.products .product__item .wishlist__btn img[src$="Heart.svg"]'
     )
     .forEach(function (heart) {
       let parent = heart.closest(".product__item");
@@ -199,7 +199,7 @@ function updateFlashSalesHearts() {
 function setupFlashSalesWishlistEvents() {
   document
     .querySelectorAll(
-      '.products .product__item .wishlist__btn img[src$="Heart.svg"]',
+      '.products .product__item .wishlist__btn img[src$="Heart.svg"]'
     )
     .forEach(function (heart) {
       heart.style.cursor = "pointer";
@@ -226,4 +226,70 @@ function setupFlashSalesWishlistEvents() {
 window.addEventListener("DOMContentLoaded", function () {
   updateFlashSalesHearts();
   setupFlashSalesWishlistEvents();
+});
+
+// Cart functionality
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Add to cart function
+function addToCart(productName, price, image) {
+  const product = { name: productName, price: price, image: image };
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Update button state
+function updateButtonState(button, productName) {
+  const isInCart = cart.some((item) => item.name === productName);
+  button.textContent = isInCart ? "Added" : "Add To Card";
+  button.classList.toggle("added", isInCart);
+}
+
+// Update cart count display
+function updateCartCount() {
+  const cartCount = cart.length;
+  const cartIcon = document.querySelector(
+    '.card_icon a[href="./pages/cart.html"]'
+  );
+  if (cartIcon && cartCount > 0) {
+    cartIcon.setAttribute("data-count", cartCount);
+    cartIcon.style.position = "relative";
+    if (!cartIcon.querySelector(".cart-count")) {
+      cartIcon.insertAdjacentHTML(
+        "beforeend",
+        `<span class="cart-count">${cartCount}</span>`
+      );
+    } else {
+      cartIcon.querySelector(".cart-count").textContent = cartCount;
+    }
+  }
+}
+
+// Initialize page
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".add-to-card");
+
+  buttons.forEach((button) => {
+    const productItem = button.closest(".product__item");
+    const productName = productItem.querySelector(".product__name").textContent;
+    const price = productItem.querySelector(".current__price").textContent;
+    const image = productItem.querySelector("img").src;
+
+    // Restore button state
+    updateButtonState(button, productName);
+
+    // Add click event
+    button.addEventListener("click", function () {
+      const isInCart = cart.some((item) => item.name === productName);
+
+      if (!isInCart) {
+        addToCart(productName, price, image);
+        updateButtonState(button, productName);
+        updateCartCount();
+      }
+    });
+  });
+
+  // Initialize cart count
+  updateCartCount();
 });

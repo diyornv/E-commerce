@@ -145,6 +145,22 @@
   cursor: pointer;
 }
 
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #db4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .sidebar {
   padding-top: 40px;
 }
@@ -399,6 +415,11 @@
 
 .product__image:hover .add-to-card {
   opacity: 1;
+}
+
+.add-to-card.added {
+  opacity: 1;
+  background: #4caf50;
 }
 
 .product__description {
