@@ -23,7 +23,7 @@ function displayCart() {
                 </div>
                 <div class="cartpage__price">${product.price}</div>
                 <div class="quantity">
-                    <input type="number" class="cartpage__input" value="01" />
+                    <input type="number" class="cartpage__input" value="01" min="1" />
                 </div>
                 <div class="subtotal">${product.price}</div>
             </div>
@@ -33,6 +33,7 @@ function displayCart() {
   });
 
   updateCartTotal();
+  addQuantityListeners(); // YANGI: quantity listenerlarni har safar yangilash
 }
 
 function removeFromCart(productName) {
@@ -43,18 +44,53 @@ function removeFromCart(productName) {
 }
 
 function updateCartTotal() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const total = cart.reduce((sum, item) => {
-    const price = parseInt(item.price.replace("$", ""));
-    return sum + price;
-  }, 0);
+  const items = document.querySelectorAll(".cartpage__item");
+  let total = 0;
+  items.forEach((item) => {
+    const subtotalText = item
+      .querySelector(".subtotal")
+      .textContent.replace("$", "");
+    total += parseFloat(subtotalText) || 0;
+  });
 
+  // Subtotal va Total joylarini aniq tanlab, har ikkalasini ham yangilaymiz
+  const subtotalElement = document.querySelector(
+    ".cart-total .subtotal-cart:nth-child(2) p:last-child"
+  ); // Subtotal
   const totalElement = document.querySelector(
-    ".cart-total .subtotal-cart:last-child p:last-child"
-  );
+    ".cart-total .subtotal-cart:nth-child(4) p:last-child"
+  ); // Total
+
+  if (subtotalElement) {
+    subtotalElement.textContent = `$${total}`;
+  }
   if (totalElement) {
     totalElement.textContent = `$${total}`;
   }
+}
+
+function addQuantityListeners() {
+  // Barcha quantity inputlarini tanlab olamiz
+  const quantityInputs = document.querySelectorAll(".cartpage__input");
+  quantityInputs.forEach((input) => {
+    input.addEventListener("input", function () {
+      // Satrni topamiz
+      const item = input.closest(".cartpage__item");
+      // Narxni olamiz (raqam sifatida)
+      const priceText = item
+        .querySelector(".cartpage__price")
+        .textContent.replace("$", "");
+      const price = parseFloat(priceText);
+      // Miqdorni olamiz
+      const quantity = parseInt(input.value) || 1;
+      // Subtotalni hisoblaymiz
+      const subtotal = price * quantity;
+      // Subtotalni yangilaymiz
+      item.querySelector(".subtotal").textContent = subtotal + "$";
+      // Umumiy summani yangilaymiz
+      updateCartTotal();
+    });
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
