@@ -70,24 +70,17 @@ function updateCartTotal() {
 }
 
 function addQuantityListeners() {
-  // Barcha quantity inputlarini tanlab olamiz
   const quantityInputs = document.querySelectorAll(".cartpage__input");
   quantityInputs.forEach((input) => {
     input.addEventListener("input", function () {
-      // Satrni topamiz
       const item = input.closest(".cartpage__item");
-      // Narxni olamiz (raqam sifatida)
       const priceText = item
         .querySelector(".cartpage__price")
         .textContent.replace("$", "");
       const price = parseFloat(priceText);
-      // Miqdorni olamiz
       const quantity = parseInt(input.value) || 1;
-      // Subtotalni hisoblaymiz
       const subtotal = price * quantity;
-      // Subtotalni yangilaymiz
       item.querySelector(".subtotal").textContent = subtotal + "$";
-      // Umumiy summani yangilaymiz
       updateCartTotal();
     });
   });
