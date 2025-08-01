@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="checkOut.css" />
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="banner">
+        <p class="banner__text">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          <a href="#" class="banner__link">ShopNow</a>
+        </p>
+        <div class="language__selector">
+          <select name="language" id="language-select">
+            <option value="english">English</option>
+            <option value="russian">Russian</option>
+          </select>
+        </div>
+      </div>
+      <nav class="container navbar">
+        <div class="logo">
+          <p class="logo__text">Exclusive</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a class="menu_a" href="../index.html">Home</a></li>
+          </ul>
+          <ul>
+            <li><a class="menu_a" href="#">Contact</a></li>
+          </ul>
+          <ul>
+            <li><a class="menu_a" href="#">About</a></li>
+          </ul>
+          <ul>
+            <li><a class="menu_a" href="../pages/signup.html">Sign up</a></li>
+          </ul>
+        </div>
+
+        <div class="search">
+          <input
+            class="search_input"
+            type="text"
+            placeholder="What are you looking for?"
+          />
+          <div class="card_icon">
+            <a href="./wishlist.html">
+              <img src="../assets/svg/Wishlist.svg" alt="" />
+            </a>
+            <a href="./cart.html">
+              <img src="../assets/svg/Cart1.svg" alt="" />
+            </a>
+
+            <div class="modal">
+              <div class="profile__icon">
+                <img src="../assets/svg/user.svg" alt="" />
+              </div>
+
+              <div class="modal__list">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/svg/user-white.svg" alt="" />
+                      <span class="model__link">Manage My Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/svg/icon-mallbag.svg" alt="" />
+                      <span class="model__link">My Order</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/svg/icon-cancel.svg" alt="" />
+                      <span class="model__link">My Cancellations</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/svg/Icon-Reviews.svg" alt="" />
+                      <span class="model__link">My Reviews</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/svg/Icon-logout.svg" alt="" />
+                      <span class="model__link">Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="border"></div>
+    </header>
+    <main class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <span>Account</span> / <span>Gaming</span> /
+        <span class="breadcrumb-active">Havic HV G-92 Gamepad</span>
+      </nav>
+      <div class="product-section">
+        <!-- Gallery -->
+        <div class="gallery">
+          <div class="thumbnails">
+            <div class="thumb active">
+              <img src="../assets/imgs/product1.png" alt="thumb1" />
+            </div>
+            <div class="thumb">
+              <img src="../assets/imgs/product2.png" alt="thumb2" />
+            </div>
+            <div class="thumb">
+              <img src="../assets/imgs/product3.png" alt="thumb3" />
+            </div>
+            <div class="thumb">
+              <img src="../assets/imgs/product4.png" alt="thumb4" />
+            </div>
+          </div>
+          <div class="main-image-container">
+            <img
+              id="main-image"
+              src="../assets/imgs/product-big.png"
+              alt="Main img"
+            />
+          </div>
+        </div>
+        <!-- Product Info -->
+        <div class="product-info">
+          <h2>Havic HV G-92 Gamepad</h2>
+          <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="reviews">(150 Reviews)</span>
+            <span class="in-stock">In Stock</span>
+          </div>
+          <div class="price">$192.00</div>
+          <p class="desc">
+            PlayStation 5 Controller Skin High quality vinyl with air channel
+            adhesive for easy bubble free install & mess free removal. Pressure
+            sensitive.
+          </p>
+          <hr />
+          <div class="options">
+            <div class="option">
+              <span>Colours:</span>
+              <span class="color color-black"></span>
+              <span class="color color-red"></span>
+            </div>
+            <div class="option">
+              <span>Size:</span>
+              <button class="size">XS</button>
+              <button class="size">S</button>
+              <button class="size active">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+            </div>
+          </div>
+          <div class="buy-row">
+            <div class="quantity">
+              <button class="qty-btn" id="decrease">-</button>
+              <span id="qty">2</span>
+              <button class="qty-btn" id="increase">+</button>
+            </div>
+            <button class="buy-btn">Buy Now</button>
+            <button class="fav-btn">&#9825;</button>
+          </div>
+          <div class="delivery">
+            <div class="delivery-item">
+              <span class="delivery-icon">&#128666;</span>
+              <div>
+                <b>Free Delivery</b><br />
+                <a href="#">Enter your postal code for Delivery Availability</a>
+              </div>
+            </div>
+            <div class="delivery-item">
+              <span class="delivery-icon">&#8635;</span>
+              <div>
+                <b>Return Delivery</b><br />
+                <span
+                  >Free 30 Days Delivery Returns. <a href="#">Details</a></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products">
+        <div class="product__item">
+          <div class="product__image">
+            <img src="../assets/imgs/gamepad.png" alt="" />
+            <div class="product__discount">-40%</div>
+            <div class="wishlist__btn">
+              <img src="../assets/svg/Heart.svg" alt="" />
+              <img src="../assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">HAVIT HV-G92 Gamepad</h4>
+            <div class="product__price">
+              <p class="current__price">$120</p>
+              <del class="original__price">$160</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <p class="count__text">(88)</p>
+            </div>
+          </div>
+        </div>
+        <div class="product__item">
+          <div class="product__image">
+            <img src="../assets/imgs/keyboard.png" alt="" />
+            <div class="product__discount">-35%</div>
+            <div class="wishlist__btn">
+              <img src="../assets/svg/Heart.svg" alt="" />
+              <img src="../assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">AK-900 Wired Keyboard</h4>
+            <div class="product__price">
+              <p class="current__price">$960</p>
+              <del class="original__price">$1160</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/nonestar.svg" alt="" /></span>
+              <p class="count__text">(75)</p>
+            </div>
+          </div>
+        </div>
+        <div class="product__item">
+          <div class="product__image">
+            <img src="../assets/imgs/monitor.png" alt="" />
+            <div class="product__discount">-30%</div>
+            <div class="wishlist__btn">
+              <img src="../assets/svg/Heart.svg" alt="" />
+              <img src="../assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">IPS LCD Gaming Monitor</h4>
+            <div class="product__price">
+              <p class="current__price">$370</p>
+              <del class="original__price">$400</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <p class="count__text">(99)</p>
+            </div>
+          </div>
+        </div>
+        <div class="product__item">
+          <div class="product__image">
+            <img src="../assets/imgs/chair.png" alt="" />
+            <div class="product__discount">-25%</div>
+            <div class="wishlist__btn">
+              <img src="../assets/svg/Heart.svg" alt="" />
+              <img src="../assets/svg/Eye.svg" alt="" />
+            </div>
+            <button class="add-to-card">Add To Card</button>
+          </div>
+          <div class="product__description">
+            <h4 class="product__name">S-Series Comfort Chair</h4>
+            <div class="product__price">
+              <p class="current__price">$375</p>
+              <del class="original__price">$400</del>
+            </div>
+            <div class="product__rating">
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span><img src="../assets/svg/star.svg" alt="" /></span>
+              <span
+                ><img src="../assets/svg/star-half-filled.svg" alt=""
+              /></span>
+              <p class="count__text">(99)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-section">
+        <div class="exclusive">
+          <h3 class="footer__logo">Exclusive</h3>
+          <h4 class="footer__title">Subscribe</h4>
+          <p class="footer__text">Get 10% off your first order</p>
+          <div class="footer__input">
+            <input
+              class="form__input"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button class="form__input-btn">
+              <img src="../assets/svg/form-send.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="footer__content-section">
+          <div class="footer__content">
+            <h3 class="footer-section-title">Support</h3>
+            <p class="footer-section-text">
+              111 Bijoy sarani, Dhaka, <br />
+              DH 1515, Bangladesh.
+            </p>
+            <p class="footer-section-text">exclusive@gmail.com</p>
+            <p class="footer-section-text">+88015-88888-9999</p>
+          </div>
+          <div class="footer__content">
+            <h3 class="footer-section-title">Account</h3>
+            <ul class="footer__content-links">
+              <li>
+                <a href="#">My Account</a>
+              </li>
+              <li>
+                <a href="#">Login / Register</a>
+              </li>
+              <li>
+                <a href="#">Cart</a>
+              </li>
+              <li>
+                <a href="#">Wishlist</a>
+              </li>
+              <li>
+                <a href="#">Shop</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__content">
+            <h3 class="footer-section-title">Quick Link</h3>
+            <ul class="footer__content-links">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Terms Of Use</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="app-download-container">
+          <div class="footer__content">
+            <h3 class="footer-section-title">Download App</h3>
+            <p class="app-description">Save $3 with App New User Only</p>
+            <div class="download-app">
+              <div class="qr-code">
+                <img src="../assets/imgs/QrCode.png" alt="qr-code" />
+              </div>
+              <div class="store-btn">
+                <a href="#">
+                  <img src="../assets/imgs/play-market.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/imgs/download-appstore.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="social-icons">
+              <a href="#">
+                <img src="../assets/svg/Icon-Facebook.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/svg/Icon-Twitter.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/svg/icon-instagram.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/svg/Icon-Linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-border"></div>
+      <div class="copyright container">
+        <img src="../assets/svg/icon-copyright.svg" alt="" />
+        <p>Copyright Rimel 2022. All right reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
