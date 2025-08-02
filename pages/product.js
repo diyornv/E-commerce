@@ -13,7 +13,6 @@ thumbs.forEach((thumb, idx) => {
   });
 });
 
-// Rang tanlash funksiyasi
 const colorBtns = document.querySelectorAll(".color");
 let selectedColor = null;
 colorBtns.forEach((btn) => {
@@ -26,7 +25,6 @@ colorBtns.forEach((btn) => {
   });
 });
 
-// Miqdor o'zgartirish funksiyasi
 const qtySpan = document.getElementById("qty");
 const plusBtn = document.getElementById("increase");
 const minusBtn = document.getElementById("decrease");
@@ -41,14 +39,10 @@ minusBtn.addEventListener("click", () => {
   qtySpan.textContent = qty;
 });
 
-// Buy Now tugmasi funksiyasi
 const buyBtn = document.querySelector(".buy-btn");
 buyBtn.addEventListener("click", () => {
   const productName = document.querySelector(".product-info h2").textContent;
   const color = selectedColor ? selectedColor : "tanlanmagan";
   const amount = qty;
-  // Faqat bitta buyurtma log chiqsin
   console.log(`Buyurtma: ${productName}, Rang: ${color}, Miqdor: ${amount}`);
 });
-
-console.log("JS ishlayapti!");
