@@ -1,4 +1,3 @@
-// Kichik rasm bosilganda asosiy rasmni o'zgartirish va active klass boshqaruvi
 const thumbs = document.querySelectorAll(".thumb img");
 const mainImg = document.getElementById("main-image");
 const thumbDivs = document.querySelectorAll(".thumb");
@@ -20,7 +19,6 @@ colorBtns.forEach((btn) => {
     colorBtns.forEach((b) => b.classList.remove("selected"));
     this.classList.add("selected");
     selectedColor = this.classList.contains("color-black") ? "black" : "red";
-    // Faqat bitta log chiqsin
     console.log(`Tanlangan rang: ${selectedColor}`);
   });
 });
